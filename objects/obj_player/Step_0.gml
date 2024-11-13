@@ -22,6 +22,9 @@ if (canMove)
     {
 		dashSpd = 5;
         dashDuration = 30;
+		var trail_x = x - lengthdir_x(8, image_angle);
+		var trail_y = y - lengthdir_y(8, image_angle);
+		part_particles_create(part_system, trail_x, trail_y, part_trail,1);
     }
 	if (dashDuration > 0) {
         objSpeed *= dashSpd;             // Apply dash speed multiplier
