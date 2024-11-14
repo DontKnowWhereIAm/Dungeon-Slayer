@@ -43,13 +43,17 @@ if (canMove)
     // Collision detection with conditional pass-through
     if (dashDuration <= 0) 
     {
+		if (instance_place(x + move_x, y + move_y, obj_trap))  // Assuming obj_trap is the specific trap object
+    {
+        instance_destroy();
+    }
         // Not dashing: Check for collision with both obj_block and obj_passable
         if (instance_place(x + move_x, y + move_y, obj_block) || instance_place(x + move_x, y + move_y, obj_passable))
         {
             move_x = 0;
             move_y = 0;
         }
-    }
+	}
     else
     {
         // Dashing: Only check collision with obj_block; ignore obj_passable
