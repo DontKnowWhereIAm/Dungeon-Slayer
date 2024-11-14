@@ -8,7 +8,8 @@ canMove = true;
 moveSpeed = 3;
 moveSpeed_diag = 2;
 moveVector_x = 0;
-moveVector_y = 0;
+moveVector_y = 0
+
 
 dashCharges = 999;
 
