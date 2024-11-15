@@ -1,0 +1,20 @@
+{
+  "$GMPath":"",
+  "%Name":"pth_enm2",
+  "closed":true,
+  "kind":1,
+  "name":"pth_enm2",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":1180.0,"y":55.0,},
+    {"speed":100.0,"x":980.0,"y":255.0,},
+    {"speed":100.0,"x":1180.0,"y":455.0,},
+    {"speed":100.0,"x":1380.0,"y":255.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
