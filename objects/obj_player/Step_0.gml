@@ -45,7 +45,14 @@ if (canMove)
     {
 		if (instance_place(x + move_x, y + move_y, obj_trap))  // Assuming obj_trap is the specific trap object
     {
-        instance_destroy();
+        if (room == Room1) {
+			x = 200; // Starting position in Room1
+			y = 400;
+		} 
+		else if (room == Room2) {
+			x = 100; // Starting position in Room2
+			y = 450;
+		}
     }
         // Not dashing: Check for collision with both obj_block and obj_passable
         if (instance_place(x + move_x, y + move_y, obj_block) || instance_place(x + move_x, y + move_y, obj_passable))
@@ -54,7 +61,9 @@ if (canMove)
             move_y = 0;
         }
 	}
+	
     else
+	
     {
         // Dashing: Only check collision with obj_block; ignore obj_passable
         if (instance_place(x + move_x, y + move_y, obj_block))

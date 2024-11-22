@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_block",
-    "path":"sprites/spr_block/spr_block.yy",
+    "name":"spr_blockPassable",
+    "path":"sprites/spr_blockPassable/spr_blockPassable.yy",
   },
   "spriteMaskId":null,
   "visible":true,
