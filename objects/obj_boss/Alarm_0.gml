@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-obj_player.x = 100;
-obj_player.y = 400;
 
-room_goto(rm_boss);
+//instance_create_layer(x, y, "Instances", shotType);
+//alarm[0] = shotInterval;
