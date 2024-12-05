@@ -11,10 +11,21 @@ moveVector_x = 0;
 moveVector_y = 0
 
 is_dashing = false
-dashCharges = 999;
+dashCharges = 3;
 
 dashSpd = 0;
 dashDuration = 0;
+minDashCharge = 2;
+maxDashCharge = 6;
+dashCooldown = 0;
+
+attackCooldown = 0;
+dashRecharge = 0;
+
+state = "empty"
+
+swordDir = 0;
+attackTimer = 0;
 
 //Sprite code
 part_system = part_system_create();

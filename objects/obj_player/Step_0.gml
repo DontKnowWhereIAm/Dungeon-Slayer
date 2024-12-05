@@ -2,12 +2,17 @@
 
 var dash = keyboard_check_pressed(vk_space);
 var shoot = mouse_check_button(mb_left);
+var shoot2 = mouse_check_button(mb_right);
+
+attackCooldown = attackCooldown - 1;
+dashCooldown = dashCooldown - 1;
+
 
 if (canMove)
 {
     // Speed Calculation
-    moveVector_x = (keyboard_check(vk_right) - keyboard_check(vk_left));
-    moveVector_y = (keyboard_check(vk_down) - keyboard_check(vk_up));
+    moveVector_x = (keyboard_check(ord("D")) - keyboard_check(ord("A")));
+    moveVector_y = (keyboard_check(ord("S")) - keyboard_check(ord("W")));
     var objSpeed = moveSpeed;
 
     // Handle diagonal movement
@@ -17,8 +22,11 @@ if (canMove)
     }
 
     // Check if dash is pressed and initiate dash properties
-    if (dash) 
+    if (dash && dashCooldown <= 0 && dashCharges > 0) 
     {
+		dashCharges = dashCharges - 1;
+		dashCooldown = 30;
+		dashRecharge = 120;
         dashSpd = 5;
         dashDuration = 30;
 
@@ -31,10 +39,16 @@ if (canMove)
     // Apply dash effect if dash is active
     if (dashDuration > 0) 
     {
+		is_dashing = true;
         objSpeed *= dashSpd;              // Apply dash speed multiplier
         dashSpd = max(dashSpd - 0.12, 1);  // Gradually decay dash speed
         dashDuration--;                    // Reduce dash duration each frame
     }
+	
+	if (dashDuration <= 0)
+	{ 
+		is_dashing = false;
+	}
 
     // Calculate movement after any dash adjustments
     var move_x = objSpeed * moveVector_x;
@@ -78,11 +92,57 @@ if (canMove)
     y += move_y;
 }
 
+// Dash recharge mechanics
+if (dashCharges < minDashCharge)
+{
+	dashRecharge = dashRecharge - 1;
+	if (dashRecharge <= 0)
+	{
+		dashRecharge = 60;
+		dashCharges = dashCharges + 1
+	}
+}
+
 // Aiming and shooting logic
 aimDir = point_direction(x, y, mouse_x, mouse_y);
 
-if (shoot) 
+if (shoot && attackCooldown <= 0 && !shoot2)
 {
+	attackCooldown = 20;
+	state = "sword attack"
+	attackTimer = 10;
+	swordDir = aimDir;
+}
+
+if (state = "sword attack")
+{
+	// PLAY SOUND HERE
+	sprite_index = spr_swordAttack; // IMPORTANT AND NOT DONE
+	image_angle = swordDir;
+	var attackRadius = 50
+	var attackArc = 75;
+	
+	with (obj_enemy) {
+		var dirToEnemy = point_direction(other.x, other.y, x, y);
+        if (point_in_circle(other.x, other.y, x, y, attackRadius) &&
+            abs(angle_difference(swordDir, dirToEnemy)) <= attackArc / 2) {
+            hp -= 3; 
+        }
+	}
+}
+
+if (state == "sword_attack") {
+    attackTimer--;
+    if (attackTimer <= 0) {
+        state = "empty";
+    }
+}
+
+
+if (shoot2  && attackCooldown <= 0 && !shoot) 
+{
+	// PLAY SOUND HERE
+	attackCooldown = 40;
     var _attackInst = instance_create_depth(x, y, depth - 100, obj_attack);
     with (_attackInst) {
         dir = other.aimDir;
