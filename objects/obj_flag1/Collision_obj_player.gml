@@ -3,4 +3,4 @@
 obj_player.x = 100;
 obj_player.y = 400;
 
-room_goto(rm_boss);
+room_goto(Room2);

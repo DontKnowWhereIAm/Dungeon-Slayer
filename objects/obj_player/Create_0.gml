@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-health = 5
+hp = 5
 
 canMove = true;
 
@@ -10,7 +10,7 @@ moveSpeed_diag = 2;
 moveVector_x = 0;
 moveVector_y = 0
 
-
+is_dashing = false
 dashCharges = 999;
 
 dashSpd = 0;
