@@ -3,6 +3,8 @@
 
 hp = 100
 global.health = hp;
+hpLock = 0;
+resistTimer = 0;
 
 canMove = true;
 tutorialStep = 0; // Start at step 0
@@ -17,11 +19,21 @@ moveVector_x = 0;
 moveVector_y = 0
 
 is_dashing = false
-dashCharges = 100;
+dashCharges = 3;
 
 dashSpd = 0;
 dashDuration = 0;
-dashCount = 0;
+minDashCharge = 2;
+maxDashCharge = 6;
+dashCooldown = 0;
+
+attackCooldown = 0;
+dashRecharge = 0;
+
+state = "empty"
+
+swordDir = 0;
+attackTimer = 0;
 
 //Sprite code
 part_system = part_system_create();

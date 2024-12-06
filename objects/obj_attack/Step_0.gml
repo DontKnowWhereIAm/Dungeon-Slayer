@@ -17,7 +17,7 @@ yspd = lengthdir_y( spd, dir);
 x += xspd;
 y += yspd;
 
-
+//FORCED THE MERGE BELOW DIDN'T WANT TO BREAK THIS BUT ALL BELOW NEEDS TO BE FIXED
 var kill_range = 20;
 
 // Check for nearby enemies within the kill range
