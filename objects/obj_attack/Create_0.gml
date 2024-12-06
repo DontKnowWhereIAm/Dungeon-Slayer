@@ -8,3 +8,6 @@ yspd = 0;
 
 maxDist = 400;
 destroy = false;
+
+secondPopupShown = false; // Tracks if the second pop-up has been shown
+dashPopupShown = false; 

@@ -1,9 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-hp = 5
+hp = 100
+global.health = hp;
 
 canMove = true;
+tutorialStep = 0; // Start at step 0
+secondPopupShown = false; // Tracks if the second pop-up has been shown
+
+global.enemyKills = 0; // Initialize kill counter
+global.dashPopupShown = false; // Global flag for the dash pop-up
 
 moveSpeed = 3;
 moveSpeed_diag = 2;
