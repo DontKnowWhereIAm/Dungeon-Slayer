@@ -51,7 +51,6 @@
     {"id":{"name":"obj_enemy3","path":"objects/obj_enemy3/obj_enemy3.yy",},},
     {"id":{"name":"obj_flag1","path":"objects/obj_flag1/obj_flag1.yy",},},
     {"id":{"name":"obj_flag2","path":"objects/obj_flag2/obj_flag2.yy",},},
-    {"id":{"name":"obj_goblin","path":"objects/obj_goblin/obj_goblin.yy",},},
     {"id":{"name":"obj_golem","path":"objects/obj_golem/obj_golem.yy",},},
     {"id":{"name":"obj_masterController","path":"objects/obj_masterController/obj_masterController.yy",},},
     {"id":{"name":"obj_passable","path":"objects/obj_passable/obj_passable.yy",},},

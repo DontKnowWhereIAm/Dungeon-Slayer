@@ -55,8 +55,7 @@ if (state == "attacking") {
         var attackRadius = 80; // Area of effect
         if (point_in_circle(playerObj.x, playerObj.y, x, y, attackRadius)) {
             if (!playerObj.is_dashing) { // Only damage player if not dashing
-                playerObj.hp -= 5; 
-                global.health = playerObj.hp; // Sync health with HUD
+                playerObj.hp -= 15;
             }
         }
 
