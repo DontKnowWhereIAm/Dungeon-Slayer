@@ -6,6 +6,14 @@ var shoot2 = mouse_check_button(mb_right);
 
 attackCooldown = attackCooldown - 1;
 dashCooldown = dashCooldown - 1;
+resistTimer = resistTimer -1;
+
+if (resistTimer > 0)
+{
+	// won't work for big damage but too much of a hassle otherwise
+	hpLock = hp;
+	hp = hpLock;
+}
 
 
 if (canMove)
@@ -30,6 +38,7 @@ if (canMove)
         dashSpd = 5;
         dashDuration = 30;
 		dashCharges -= 1;
+		resistTimer = 45;
 		
 		// Sync dash charges with HUD
         global.dash_charges = dashCharges;

@@ -9,8 +9,14 @@ if (stunTimer > 0) {
         if (hp > 0) state = "chasing"; // Return to chase state
     }
 }
-if (attackCooldown > 0) attackCooldown--;
-if (grappleTimer > 0) grappleTimer--;
+if (attackCooldown > 0)
+{
+	attackCooldown--;
+}
+if (grappleTimer > 0) 
+{
+	grappleTimer--;
+}
 
 // Calculate distance and direction to player once
 var distToPlayer = point_distance(x, y, playerObj.x, playerObj.y);

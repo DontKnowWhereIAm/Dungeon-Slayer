@@ -3,6 +3,8 @@
 
 hp = 100
 global.health = hp;
+hpLock = 0;
+resistTimer = 0;
 
 canMove = true;
 tutorialStep = 0; // Start at step 0

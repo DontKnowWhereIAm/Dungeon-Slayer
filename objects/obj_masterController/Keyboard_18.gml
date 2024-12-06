@@ -13,7 +13,7 @@ if keyboard_check(ord("B")){
 room_goto_previous()
 }
 if keyboard_check(ord("L")){
-	obj_player.hp = 999;
+	obj_player.resistTimer = 99999;
 }
 if keyboard_check(ord("D")){
 	obj_player.dashCharges = 999;
