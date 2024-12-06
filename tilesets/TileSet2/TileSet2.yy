@@ -1,15 +1,13 @@
 {
   "$GMTileSet":"",
-  "%Name":"TileSet1",
-  "autoTileSets":[
-    {"$GMAutoTileSet":"","%Name":"autotile_1","closed_edge":false,"name":"autotile_1","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[124,0,0,0,76,0,0,0,0,0,474,0,0,73,0,173,],},
-  ],
+  "%Name":"TileSet2",
+  "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"TileSet1",
+  "name":"TileSet2",
   "out_columns":50,
   "out_tilehborder":2,
   "out_tilevborder":2,
@@ -20,8 +18,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"Tiles_prison",
-    "path":"sprites/Tiles_prison/Tiles_prison.yy",
+    "name":"Tile_Tree_small",
+    "path":"sprites/Tile_Tree_small/Tile_Tree_small.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
