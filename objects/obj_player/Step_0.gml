@@ -106,7 +106,7 @@ if (dashCharges < minDashCharge)
 // Aiming and shooting logic
 aimDir = point_direction(x, y, mouse_x, mouse_y);
 
-if (shoot && attackCooldown <= 0 && !shoot2)
+if (shoot && attackCooldown <= 0 && !shoot2 && state != "dashing" && state != "sword attack")
 {
 	attackCooldown = 20;
 	state = "sword attack"
@@ -139,7 +139,7 @@ if (state == "sword_attack") {
 }
 
 
-if (shoot2  && attackCooldown <= 0 && !shoot) 
+if (shoot2  && attackCooldown <= 0 && !shoot && state != "sword attack") 
 {
 	// PLAY SOUND HERE
 	attackCooldown = 40;
@@ -147,4 +147,9 @@ if (shoot2  && attackCooldown <= 0 && !shoot)
     with (_attackInst) {
         dir = other.aimDir;
     }
+}
+
+if (state != "sword_attack" || "dashing") 
+{
+	state = "empty";
 }
