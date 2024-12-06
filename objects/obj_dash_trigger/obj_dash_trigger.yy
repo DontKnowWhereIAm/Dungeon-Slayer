@@ -8,8 +8,8 @@
   "name":"obj_dash_trigger",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"trigger objects",
+    "path":"folders/Objects/trigger objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,

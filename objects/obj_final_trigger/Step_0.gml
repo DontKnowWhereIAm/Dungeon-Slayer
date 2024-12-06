@@ -9,6 +9,6 @@ if (place_meeting(x, y, obj_player)) {
         show_debug_message("Final pop-up triggered.");
 
         // Transition to Room1 after a delay
-        alarm[0] = 60; // Wait 1 second before transitioning to the next room
+        alarm[0] = 180; // Wait 1 second before transitioning to the next room
     }
 }
