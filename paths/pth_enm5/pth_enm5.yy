@@ -1,0 +1,20 @@
+{
+  "$GMPath":"",
+  "%Name":"pth_enm5",
+  "closed":true,
+  "kind":0,
+  "name":"pth_enm5",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":950.0,"y":200.0,},
+    {"speed":100.0,"x":950.0,"y":300.0,},
+    {"speed":100.0,"x":1150.0,"y":300.0,},
+    {"speed":100.0,"x":1150.0,"y":200.0,},
+  ],
+  "precision":4,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}

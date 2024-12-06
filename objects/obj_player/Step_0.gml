@@ -17,11 +17,15 @@ if (canMove)
     }
 
     // Check if dash is pressed and initiate dash properties
-    if (dash) 
+    if (dash  && dashCharges > 0) 
     {
         dashSpd = 5;
         dashDuration = 30;
-
+		dashCharges -= 1;
+		
+		// Sync dash charges with HUD
+        global.dash_charges = dashCharges;
+		
         // Create dash trail particle effect
         var trail_x = x - lengthdir_x(8, image_angle);
         var trail_y = y - lengthdir_y(8, image_angle);
@@ -45,13 +49,28 @@ if (canMove)
     {
 		if (instance_place(x + move_x, y + move_y, obj_trap))  // Assuming obj_trap is the specific trap object
     {
-        if (room == Room1) {
-			x = 200; // Starting position in Room1
-			y = 400;
-		} 
-		else if (room == Room2) {
-			x = 100; // Starting position in Room2
-			y = 450;
+		
+		hp -= 30;
+		global.health = hp; // Sync with HUD
+		
+		// Check if health is 0 or below
+		if (hp <= 0) {
+			instance_destroy();
+			room_goto(rm_lose); // Transition to Lose Screen
+		}
+		else {
+	        if (room == Room1) {
+				x = 200; // Starting position in Room1
+				y = 400;
+			} 
+			else if (room == Room2) {
+				x = 100; // Starting position in Room2
+				y = 450;
+			}
+			else if (room == rm_tutorial) {
+				x = 200;
+				y = 400;
+			}
 		}
     }
         // Not dashing: Check for collision with both obj_block and obj_passable
@@ -78,6 +97,50 @@ if (canMove)
     y += move_y;
 }
 
+// Check if a pop-up box is active
+if (instance_exists(obj_popup) && obj_popup.active) {
+    canMove = false; // Disable movement
+	
+} 
+else {
+    canMove = true; // Enable movement
+	
+}
+
+// Track dashes
+if (keyboard_check_pressed(vk_space) && dashCharges > 0) {
+    dashCount += 1; // Increment dash count
+	show_debug_message("Dash Count: " + string(dashCount)); // Debug message
+}
+
+
+// Trigger pop-up after 3 dashes
+/*if (tutorialStep == 0 && dashCount == 3 && !instance_exists(obj_popup)) {
+    tutorialStep = 1; // Move to the next step
+    var new_popup = instance_create_layer(room_width / 2, room_height / 1.2, "GUI", obj_popup);
+    new_popup.text = "Now try collecting the tokens on the floor.";
+    show_debug_message("Second pop-up triggered!");
+}*/
+if (tutorialStep == 0) {
+    // Check for 3 dashes
+    if (dashCount == 3 && !instance_exists(obj_popup)) {
+        tutorialStep = 1;
+        var new_popup = instance_create_layer(room_width / 2, room_height / 1.2, "GUI", obj_popup);
+        new_popup.text = "Now try collecting the tokens on the floor.";
+        show_debug_message("Second pop-up triggered!");
+    }
+}
+
+if (tutorialStep == 1) {
+    // Check for collecting 3 tokens
+    if (global.tokens == 3 && !instance_exists(obj_popup)) {
+        tutorialStep = 2;
+        var new_popup = instance_create_layer(room_width / 2, room_height / 1.2, "GUI", obj_popup);
+        new_popup.text = "Now try using a dash mechanic to go through the passable wall.";
+        show_debug_message("Third pop-up triggered!");
+    }
+}
+
 // Aiming and shooting logic
 aimDir = point_direction(x, y, mouse_x, mouse_y);
 
@@ -87,4 +150,11 @@ if (shoot)
     with (_attackInst) {
         dir = other.aimDir;
     }
+}
+
+if (global.enemyKills == 2 && !instance_exists(obj_popup) && !global.dashPopupShown) {
+    global.dashPopupShown = true; // Mark the pop-up as shown
+    var new_popup = instance_create_layer(room_width / 2, room_height / 1.2, "GUI", obj_popup);
+    new_popup.text = "Try using the dash to go through traps.";
+    show_debug_message("Dash tutorial pop-up triggered.");
 }
