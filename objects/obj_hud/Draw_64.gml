@@ -22,4 +22,17 @@ draw_text(hud_x, hud_y + 60, "Score: " + string(global.score));
 // Draw Dash Charges
 draw_text(hud_x, hud_y + 90, "Dash Charges: " + string(global.dash_charges));
 
-draw_text(hud_x, hud_y + 120, "Dash Count: " + string(global.dash_count));
+//draw_text(hud_x, hud_y + 120, "Dash Count: " + string(global.dash_count));
+
+
+// Format the timer with two digits for hundredths
+if (room == rm_puzzle){
+	var seconds = floor(global.timer / 100);       // Whole seconds
+	var hundredths = floor(global.timer) mod 100;  // Two-digit hundredths
+	
+	if (hundredths < 10) {
+	    draw_text(hud_x, hud_y + 120, "Time Left: " + string(seconds) + ".0" + string(hundredths));
+	} else {
+	    draw_text(hud_x, hud_y + 120, "Time Left: " + string(seconds) + "." + string(hundredths));
+	}
+}
