@@ -4,6 +4,10 @@
 if (state != "dashing") 
 {
 	hp = hp -10;
+	instance_destroy(obj_dashableBullet);
 }
 
-	
+if (state == "dashing") 
+{
+	global.score++;
+}	

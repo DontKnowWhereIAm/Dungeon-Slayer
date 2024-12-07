@@ -26,6 +26,6 @@ draw_rectangle(x_pos, y_pos, x_pos + bar_width, y_pos + bar_height, true);
 draw_set_font(fnt_boss);
 draw_set_color(c_white);
 draw_text((1920 - bar_width) / 2, y_pos - 30, "The Forgotten One");
-draw_text((1920 - bar_width) / 2, y_pos + bar_height + 15, string(floor(boss_health)) + " / " + string(max_hp));
+draw_text((1920 - bar_width) / 2, y_pos + bar_height + 20, string(floor(boss_health)) + " / " + string(max_hp));
 
 draw_set_font(-1);
