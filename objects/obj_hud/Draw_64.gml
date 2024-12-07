@@ -9,10 +9,10 @@ draw_text(hud_x, hud_y, "Tokens: " + string(global.tokens));
 
 // Draw Health Bar
 var health_width = 200;
-var health_height = 5;
+var health_height = 8;
 var health_percentage = global.health / 100;
 draw_set_color(c_black);
-draw_rectangle(hud_x, hud_y + 30, hud_x + health_width, hud_y + 30 + health_height, false);
+draw_rectangle(hud_x, hud_y + 17, hud_x + health_width, hud_y + 30 + health_height, false);
 if (global.health >= 80) {
     draw_set_color(c_lime);
 } else if (global.health >= 50) {
@@ -24,7 +24,7 @@ if (global.health >= 80) {
 } else {
     draw_set_color(c_red);
 }
-draw_rectangle(hud_x, hud_y + 15, hud_x + health_width * health_percentage, hud_y + 30 + health_height, false);
+draw_rectangle(hud_x, hud_y + 17, hud_x + health_width * health_percentage, hud_y + 30 + health_height, false);
 
  draw_set_color(c_white)
 //Draw Score

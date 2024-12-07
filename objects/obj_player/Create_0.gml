@@ -16,7 +16,7 @@ global.dashPopupShown = false; // Global flag for the dash pop-up
 //puzzle room
 global.timer = 3000;
 
-
+global.skipKillPopup = true;
 
 moveSpeed = 3;
 moveSpeed_diag = 2;
