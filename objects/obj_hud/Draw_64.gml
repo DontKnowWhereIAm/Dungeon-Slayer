@@ -40,10 +40,10 @@ if (room == rm_puzzle){
 	var hundredths = floor(global.timer) mod 100;
 	
 	if (hundredths < 10) {
-	    draw_text(hud_x, hud_y + 100, "Time Left: " + string(seconds) + ".0" + string(hundredths));
+	    draw_text(hud_x, hud_y + 75, "Time Left: " + string(seconds) + ".0" + string(hundredths));
 	} else {
-	    draw_text(hud_x, hud_y + 100, "Time Left: " + string(seconds) + "." + string(hundredths));
+	    draw_text(hud_x, hud_y + 75, "Time Left: " + string(seconds) + "." + string(hundredths));
 	}
 }
 
-draw_text(hud_x, hud_y + 130, "Dash Count: " + string(global.dash_count));
+//draw_text(hud_x, hud_y + 75, "Dash Count: " + string(global.dash_count));
