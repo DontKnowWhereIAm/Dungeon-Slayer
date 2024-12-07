@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 if (active) {
     // Increment the timer
     timer++;
@@ -14,10 +13,11 @@ if (active) {
 
     // Check for player movement to dismiss the pop-up
     if (can_disappear) {
-        if (keyboard_check(vk_left) || keyboard_check(vk_right) || keyboard_check(vk_up) || keyboard_check(vk_down)) {
-            active = false; // Deactivate the pop-up
-            instance_destroy(); // Destroy the pop-up instance
-            show_debug_message("Pop-up dismissed!");
-        }
+        if (keyboard_check(ord("A")) || keyboard_check(ord("D")) || 
+		    keyboard_check(ord("W")) || keyboard_check(ord("S"))) {
+		    active = false; // Deactivate the pop-up
+		    instance_destroy(); // Destroy the pop-up instance
+		    show_debug_message("Pop-up dismissed!");
+		}
     }
 }

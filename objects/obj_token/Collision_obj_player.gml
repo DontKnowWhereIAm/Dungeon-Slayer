@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+
 if (instance_exists(obj_player)) {
     var player = instance_find(obj_player, 0); // Get the obj_player instance
 
@@ -14,7 +15,6 @@ if (instance_exists(obj_player)) {
             player.tutorialStep = 2; // Move to the next step
             var new_popup = instance_create_layer(room_width / 2, room_height / 1.2, "GUI", obj_popup);
             new_popup.text = "Now try using a dash mechanic to go through the passable wall.";
-            show_debug_message("Third pop-up triggered!");
         }
     }
 }

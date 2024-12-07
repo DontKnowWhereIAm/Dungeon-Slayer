@@ -31,6 +31,7 @@ dashDuration = 0;
 minDashCharge = 2;
 maxDashCharge = 6;
 dashCooldown = 0;
+dashCount = 0;
 
 attackCooldown = 0;
 dashRecharge = 0;

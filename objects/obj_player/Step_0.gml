@@ -134,6 +134,7 @@ if (dashCharges < minDashCharge)
 		dashCharges = dashCharges + 1
 	}
 }
+
 // Check if a pop-up box is active
 if (instance_exists(obj_popup) && obj_popup.active) {
     canMove = false; // Disable movement
@@ -160,7 +161,7 @@ if (keyboard_check_pressed(vk_space) && dashCharges > 0) {
 }*/
 if (tutorialStep == 0) {
     // Check for 3 dashes
-    if (dashCount == 3 && !instance_exists(obj_popup)) {
+    if (dashCount >= 3 && !instance_exists(obj_popup)) {
         tutorialStep = 1;
         var new_popup = instance_create_layer(room_width / 2, room_height / 1.2, "GUI", obj_popup);
         new_popup.text = "Now try collecting the tokens on the floor.";

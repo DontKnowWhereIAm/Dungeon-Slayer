@@ -1,6 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-
 if (active) {
     // Set the font for the pop-up
     draw_set_font(fnt_popup);
