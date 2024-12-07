@@ -7,7 +7,7 @@ stunTimer = 0;
 
 state = "idle";
 playerObj = obj_player;
-detectionRadius = 250;
+detectionRadius = 500;
 attackRange = 70;
 attackCooldown = 0;
 lastAttackDir = 0;

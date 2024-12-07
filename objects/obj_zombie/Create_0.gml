@@ -8,7 +8,7 @@ stunTimer = 0;
 
 state = "idle";
 playerObj = obj_player;
-detectionRadius = 150;
+detectionRadius = 300;
 attackRange = 40;
 grappleRange = 20;
 attackCooldown = 0;
