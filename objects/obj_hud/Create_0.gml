@@ -1,8 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
-global.tokens = 0;        // Collected tokens
+//global.tokens = 0;        // Collected tokens
 
-global.score = 0;         // Total score
+if (!variable_global_exists("tokens")) {
+    global.tokens = 0; // Initialize tokens to 0
+}
+
+if (!variable_global_exists("score_reset")) {
+    global.score_reset = false; // Flag to track if the score has been reset
+}
 
 
 // HUD positioning

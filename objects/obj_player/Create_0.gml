@@ -6,6 +6,10 @@ global.health = hp;
 hpLock = 0;
 resistTimer = 0;
 
+//hud
+global.score = 0;
+global.tokens = 0; 
+
 canMove = true;
 tutorialStep = 0; // Start at step 0
 secondPopupShown = false; // Tracks if the second pop-up has been shown
