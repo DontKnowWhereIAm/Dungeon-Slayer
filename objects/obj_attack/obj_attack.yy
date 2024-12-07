@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite3",
-    "path":"sprites/Sprite3/Sprite3.yy",
+    "name":"spr_attack",
+    "path":"sprites/spr_attack/spr_attack.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -31,7 +31,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.6.2.162",
+    "IDEVersion":"2024.8.1.171",
   },
   "name":"Prototype",
   "resources":[
@@ -81,6 +81,7 @@
     {"id":{"name":"snd_main","path":"sounds/snd_main/snd_main.yy",},},
     {"id":{"name":"snd_start","path":"sounds/snd_start/snd_start.yy",},},
     {"id":{"name":"snd_Thud","path":"sounds/snd_Thud/snd_Thud.yy",},},
+    {"id":{"name":"spr_attack","path":"sprites/spr_attack/spr_attack.yy",},},
     {"id":{"name":"spr_block","path":"sprites/spr_block/spr_block.yy",},},
     {"id":{"name":"spr_blockPassable","path":"sprites/spr_blockPassable/spr_blockPassable.yy",},},
     {"id":{"name":"spr_boss","path":"sprites/spr_boss/spr_boss.yy",},},
@@ -106,7 +107,6 @@
     {"id":{"name":"spr_zombie_dead","path":"sprites/spr_zombie_dead/spr_zombie_dead.yy",},},
     {"id":{"name":"spr_zombie_stay","path":"sprites/spr_zombie_stay/spr_zombie_stay.yy",},},
     {"id":{"name":"spr_zombie_walk","path":"sprites/spr_zombie_walk/spr_zombie_walk.yy",},},
-    {"id":{"name":"Sprite3","path":"sprites/Sprite3/Sprite3.yy",},},
     {"id":{"name":"Tile_prop","path":"sprites/Tile_prop/Tile_prop.yy",},},
     {"id":{"name":"Tile_Tree_small","path":"sprites/Tile_Tree_small/Tile_Tree_small.yy",},},
     {"id":{"name":"Tile_Tree","path":"sprites/Tile_Tree/Tile_Tree.yy",},},
