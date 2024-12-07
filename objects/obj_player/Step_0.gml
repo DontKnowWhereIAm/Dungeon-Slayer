@@ -191,28 +191,22 @@ aimDir = point_direction(x, y, mouse_x, mouse_y);
 
 if (shoot && attackCooldown <= 0 && !shoot2 && state != "dashing" && state != "sword attack")
 {
-	attackCooldown = 20;
+	attackCooldown = 30;
 	state = "sword attack"
 	attackTimer = 10;
-	swordDir = aimDir;
 }
 
 if (state = "sword attack")
 {
 	// PLAY SOUND HERE
-	sprite_index = spr_swordAttack; // IMPORTANT AND NOT DONE
-	image_angle = swordDir;
-	var attackRadius = 50
-	var attackArc = 75;
+	// sprite_index = spr_swordAttack; // IMPORTANT AND NOT DONE
 	
-	with (obj_enemy) {
-		var dirToEnemy = point_direction(other.x, other.y, x, y);
-        if (point_in_circle(other.x, other.y, x, y, attackRadius) &&
-            abs(angle_difference(swordDir, dirToEnemy)) <= attackArc / 2) {
-            hp -= 3; 
-        }
-	}
+	var _attackInst = instance_create_depth(x, y, depth - 100, obj_attack2);
+    with (_attackInst) {
+        dir = other.aimDir;
+    }
 }
+
 
 if (state == "sword_attack") {
     attackTimer--;

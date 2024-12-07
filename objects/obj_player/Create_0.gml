@@ -38,7 +38,6 @@ dashRecharge = 0;
 
 state = "empty"
 
-swordDir = 0;
 attackTimer = 0;
 
 //Sprite code
