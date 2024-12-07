@@ -8,6 +8,14 @@ attackCooldown = attackCooldown - 1;
 dashCooldown = dashCooldown - 1;
 resistTimer = resistTimer -1;
 
+if (state == "sword attack")
+{
+	sprite_index = spr_testPlayer_attack
+} else
+{
+	sprite_index = spr_testPlayer_walk
+}
+
 if (resistTimer > 0)
 {
 	// won't work for big damage but too much of a hassle otherwise
@@ -198,22 +206,19 @@ if (shoot && attackCooldown <= 0 && !shoot2 && state != "dashing" && state != "s
 {
 	attackCooldown = 30;
 	state = "sword attack"
-	attackTimer = 10;
+	attackTimer = 20;
 }
 
-if (state = "sword attack")
+if (state == "sword attack")
 {
 	// PLAY SOUND HERE
-	// sprite_index = spr_swordAttack; // IMPORTANT AND NOT DONE
-	
 	var _attackInst = instance_create_depth(x, y, depth - 100, obj_attack2);
     with (_attackInst) {
         dir = other.aimDir;
     }
 }
 
-
-if (state == "sword_attack") {
+if (state == "sword attack") {
     attackTimer--;
     if (attackTimer <= 0) {
         state = "empty";
@@ -231,7 +236,7 @@ if (shoot2  && attackCooldown <= 0 && !shoot && state != "sword attack")
     }
 }
 
-if (state != "sword_attack" || "dashing") 
+if (state != "sword attack" && state != "dashing") 
 {
 	state = "empty";
 }
