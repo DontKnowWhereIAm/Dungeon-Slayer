@@ -41,8 +41,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_boss",
-    "path":"sprites/spr_boss/spr_boss.yy",
+    "name":"spr_golem_idle",
+    "path":"sprites/spr_golem_idle/spr_golem_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,
