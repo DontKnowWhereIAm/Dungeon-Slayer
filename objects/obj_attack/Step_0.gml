@@ -48,13 +48,14 @@ with (obj_enemy3) {
    }  
 }
 
-if (place_meeting(x, y, obj_enemy4)) {
+if (place_meeting(x, y, obj_enemy4)){
     global.enemyKills += 1;
 	global.score += 20;
     show_debug_message("Enemy4 killed. Total kills: " + string(global.enemyKills));
     with (instance_nearest(x, y, obj_enemy4)) instance_destroy();
     instance_destroy();
 }
+
 
 if (place_meeting(x, y, obj_enemy5)) {
     global.enemyKills += 1;

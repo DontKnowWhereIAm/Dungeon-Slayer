@@ -1,0 +1,1 @@
+text = "Welcome to the tutorial. Try using the dash by pressing SPACE.";

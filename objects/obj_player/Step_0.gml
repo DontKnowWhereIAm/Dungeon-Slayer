@@ -32,13 +32,16 @@ if (canMove)
     // Check if dash is pressed and initiate dash properties
     if (dash && dashCooldown <= 0 && dashCharges > 0) 
     {
-		dashCharges = dashCharges - 1;
+		dashCount += 1; // Increment dash count FIRST
+		show_debug_message("Dash Count: " + string(dashCount));
+		//dashCharges = dashCharges - 1;
 		dashCooldown = 30;
 		dashRecharge = 120;
         dashSpd = 5;
         dashDuration = 30;
 		dashCharges -= 1;
 		resistTimer = 45;
+
 		
 		// Sync dash charges with HUD
         global.dash_charges = dashCharges;
@@ -131,9 +134,12 @@ if (dashCharges < minDashCharge)
 	if (dashRecharge <= 0)
 	{
 		dashRecharge = 60;
-		dashCharges = dashCharges + 1
+		//dashCharges = dashCharges + 1
+		dashCharges += 1;
+		show_debug_message("Dash Recharged! Current Charges: " + string(dashCharges));
 	}
 }
+
 // Check if a pop-up box is active
 if (instance_exists(obj_popup) && obj_popup.active) {
     canMove = false; // Disable movement
@@ -145,11 +151,12 @@ else {
 }
 
 // Track dashes
-if (keyboard_check_pressed(vk_space) && dashCharges > 0) {
+/*
+if (keyboard_check_pressed(vk_space) && dashCharges >= 1) {
     dashCount += 1; // Increment dash count
 	show_debug_message("Dash Count: " + string(dashCount)); // Debug message
 }
-
+*/
 
 // Trigger pop-up after 3 dashes
 /*if (tutorialStep == 0 && dashCount == 3 && !instance_exists(obj_popup)) {
@@ -160,13 +167,14 @@ if (keyboard_check_pressed(vk_space) && dashCharges > 0) {
 }*/
 if (tutorialStep == 0) {
     // Check for 3 dashes
-    if (dashCount == 3 && !instance_exists(obj_popup)) {
+    if (dashCount == 3 ){
         tutorialStep = 1;
         var new_popup = instance_create_layer(room_width / 2, room_height / 1.2, "GUI", obj_popup);
         new_popup.text = "Now try collecting the tokens on the floor.";
         show_debug_message("Second pop-up triggered!");
     }
 }
+
 
 if (tutorialStep == 1) {
     // Check for collecting 3 tokens
