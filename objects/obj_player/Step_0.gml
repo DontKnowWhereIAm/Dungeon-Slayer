@@ -73,7 +73,7 @@ if (canMove)
 		if (instance_place(x + move_x, y + move_y, obj_trap))  // Assuming obj_trap is the specific trap object
     {
 		
-		hp -= 30;
+		hp -= 15;
 		global.health = hp; // Sync with HUD
 		
 		// Check if health is 0 or below
@@ -93,6 +93,10 @@ if (canMove)
 			else if (room == rm_tutorial) {
 				x = 200;
 				y = 400;
+			}
+			else if (room == rm_puzzle) {
+				x = 50;
+				y = 515;
 			}
 		}
     }
@@ -229,4 +233,16 @@ if (global.enemyKills == 2 && !instance_exists(obj_popup) && !global.dashPopupSh
     var new_popup = instance_create_layer(room_width / 2, room_height / 1.2, "GUI", obj_popup);
     new_popup.text = "Try using the dash to go through traps.";
     show_debug_message("Dash tutorial pop-up triggered.");
+}
+
+if (room == rm_puzzle) {
+    if (global.timer > 0) {
+        global.timer -= (1 / room_speed) * 100; // Decrease timer in hundredths
+    } else if (global.timer <= 0) {
+        // Reset player position when the timer runs out
+        x = 50; // Starting X-coordinate in the puzzle room
+        y = 515; // Starting Y-coordinate in the puzzle room
+        global.timer = 3000; // Reset timer to 20 seconds
+        show_debug_message("Time's up! Resetting player position.");
+    }
 }

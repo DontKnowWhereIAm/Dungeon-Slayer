@@ -13,6 +13,11 @@ secondPopupShown = false; // Tracks if the second pop-up has been shown
 global.enemyKills = 0; // Initialize kill counter
 global.dashPopupShown = false; // Global flag for the dash pop-up
 
+//puzzle room
+global.timer = 3000;
+
+
+
 moveSpeed = 3;
 moveSpeed_diag = 2;
 moveVector_x = 0;
