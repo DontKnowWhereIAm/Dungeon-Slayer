@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_zombie_walk",
+    "path":"sprites/spr_zombie_walk/spr_zombie_walk.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }

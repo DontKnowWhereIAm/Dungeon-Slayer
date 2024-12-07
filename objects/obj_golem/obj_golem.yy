@@ -33,7 +33,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_golem_glowing",
+    "path":"sprites/spr_golem_glowing/spr_golem_glowing.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
