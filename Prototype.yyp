@@ -31,7 +31,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.8.1.171",
+    "IDEVersion":"2024.6.2.162",
   },
   "name":"Prototype",
   "resources":[
@@ -51,8 +51,8 @@
     {"id":{"name":"obj_enemy3","path":"objects/obj_enemy3/obj_enemy3.yy",},},
     {"id":{"name":"obj_flag1","path":"objects/obj_flag1/obj_flag1.yy",},},
     {"id":{"name":"obj_flag2","path":"objects/obj_flag2/obj_flag2.yy",},},
-    {"id":{"name":"obj_golem","path":"objects/obj_golem/obj_golem.yy",},},
     {"id":{"name":"obj_flag3","path":"objects/obj_flag3/obj_flag3.yy",},},
+    {"id":{"name":"obj_golem","path":"objects/obj_golem/obj_golem.yy",},},
     {"id":{"name":"obj_hud","path":"objects/obj_hud/obj_hud.yy",},},
     {"id":{"name":"obj_masterController","path":"objects/obj_masterController/obj_masterController.yy",},},
     {"id":{"name":"obj_maze_goal","path":"objects/obj_maze_goal/obj_maze_goal.yy",},},
