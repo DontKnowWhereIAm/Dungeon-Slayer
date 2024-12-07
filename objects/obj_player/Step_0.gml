@@ -86,7 +86,7 @@ if (canMove)
 		}
 		else {
 	        if (room == Room1) {
-				x = 200; // Starting position in Room1
+				x = 100; // Starting position in Room1
 				y = 400;
 			} 
 			else if (room == Room2) {
