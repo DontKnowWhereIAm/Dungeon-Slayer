@@ -5,7 +5,7 @@ if (instance_exists(obj_player)) {
     var player = instance_find(obj_player, 0); // Get the obj_player instance
 
     // Only allow collection if tutorialStep is 1 or greater
-    if (player.tutorialStep >= 1) {
+  if (player.tutorialStep >= 1) {
         global.tokens += 1;  // Update token count
 		global.score += 10;
         instance_destroy();  // Destroy the token
@@ -17,4 +17,5 @@ if (instance_exists(obj_player)) {
             new_popup.text = "Now try using a dash mechanic to go through the passable wall.";
         }
     }
+	
 }

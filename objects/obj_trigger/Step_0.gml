@@ -12,6 +12,5 @@ if (place_meeting(x, y, obj_player)) {
 
         // Destroy or deactivate the trigger
         instance_destroy();
-        show_debug_message("Trigger activated and destroyed.");
     }
 }
