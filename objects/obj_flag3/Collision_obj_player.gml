@@ -4,4 +4,7 @@
 obj_player.x = 50;
 obj_player.y = 400;
 
+
+audio_stop_sound(snd_start);
+
 room_goto(rm_puzzle);
