@@ -45,3 +45,5 @@ if (room == rm_puzzle){
 	    draw_text(hud_x, hud_y + 100, "Time Left: " + string(seconds) + "." + string(hundredths));
 	}
 }
+
+draw_text(hud_x, hud_y + 130, "Dash Count: " + string(global.dash_count));
