@@ -54,6 +54,8 @@ if (canMove)
 		// Sync dash charges with HUD
         global.dash_charges = dashCharges;
 		
+		audio_play_sound(snd_dash, 1, false)
+		
         // Create dash trail particle effect
         var trail_x = x - lengthdir_x(8, image_angle);
         var trail_y = y - lengthdir_y(8, image_angle);

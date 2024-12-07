@@ -90,6 +90,7 @@
     {"id":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
     {"id":{"name":"shader_red","path":"shaders/shader_red/shader_red.yy",},},
     {"id":{"name":"snd_boss","path":"sounds/snd_boss/snd_boss.yy",},},
+    {"id":{"name":"snd_dash","path":"sounds/snd_dash/snd_dash.yy",},},
     {"id":{"name":"snd_main","path":"sounds/snd_main/snd_main.yy",},},
     {"id":{"name":"snd_start","path":"sounds/snd_start/snd_start.yy",},},
     {"id":{"name":"snd_Thud","path":"sounds/snd_Thud/snd_Thud.yy",},},
