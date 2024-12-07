@@ -31,9 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_trigger",
-    "path":"sprites/spr_trigger/spr_trigger.yy",
+    "name":"spr_flag",
+    "path":"sprites/spr_flag/spr_flag.yy",
   },
   "spriteMaskId":null,
-  "visible":false,
+  "visible":true,
 }
