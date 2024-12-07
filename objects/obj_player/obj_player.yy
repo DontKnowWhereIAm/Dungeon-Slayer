@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_testPlayer",
-    "path":"sprites/spr_testPlayer/spr_testPlayer.yy",
+    "name":"spr_testPlayer_walk",
+    "path":"sprites/spr_testPlayer_walk/spr_testPlayer_walk.yy",
   },
   "spriteMaskId":null,
   "visible":true,
