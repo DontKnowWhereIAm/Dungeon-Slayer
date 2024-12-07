@@ -150,6 +150,11 @@ else {
 	
 }
 
+if (hp <= 0) {
+	instance_destroy();
+	room_goto(rm_lose); // Transition to Lose Screen
+}
+
 // Track dashes
 /*
 if (keyboard_check_pressed(vk_space) && dashCharges >= 1) {
